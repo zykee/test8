@@ -71,10 +71,9 @@ module.exports = function main(input) {
 		if((i+1)%(input.length)==0)
 			text+='\n'
 	}
-	console.log(text)
+	//console.log(text)
 	
     //console.log("Debug Info");
     //return 'Hello World!';
     
-	return parseInt(input)
-};
+	return text
