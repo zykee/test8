@@ -69,7 +69,7 @@ module.exports = function main(input) {
 	{
 		text+=fig[i]
 		text+=' '
-		if((i+1)%3==0)
+		if((i+1)%(input.length)==0)
 			text+='\n'
 	}
 	console.log(text)
