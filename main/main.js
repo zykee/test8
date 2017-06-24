@@ -1,5 +1,5 @@
 module.exports = function main(input) {
-	var fig = new array(3*(input.length))
+	var fig = new Array(3*(input.length))
 	var text
 	var a
 	for(var i=0;i<input.length;i++)
