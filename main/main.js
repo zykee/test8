@@ -1,7 +1,6 @@
 module.exports = function main(input) {
 	var fig = new Array(3*(input.length))
 	var text=''
-	var a
 	for(var i=0;i<input.length;i++)
 	{
 		if(input[i]=='0')
@@ -76,6 +75,6 @@ module.exports = function main(input) {
 	
     //console.log("Debug Info");
     //return 'Hello World!';
-    a=parseInt(input)
-	return a
+    
+	return parseInt(input)
 };
