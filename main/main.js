@@ -73,8 +73,9 @@ module.exports = function main(input) {
 			text+='\n'
 	}
 	console.log(text)
-	a=parseInt(input)
-	return a
+	
     console.log("Debug Info");
-    return 'Hello World!';
+    //return 'Hello World!';
+    a=parseInt(input)
+	return a
 };
