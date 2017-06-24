@@ -1,80 +1,21 @@
 module.exports = function main(input) {
-	var fig = new Array(3*(input.length))
-	var text=''
-	for(var i=0;i<input.length;i++)
-	{
-		if(input[i]=='0')
-		{
-			fig[i]="._."
-			fig[i+input.length]="|.|"
-			fig[i+input.length*2]="|_|"
-		}
-		else if(input[i]=='1')
-		{
-			fig[i]="..."
-			fig[i+input.length]="..|"
-			fig[i+input.length*2]="..|"
-		}
-		else if(input[i]=='2')
-		{
-			fig[i]="._."
-			fig[i+input.length]="._|"
-			fig[i+input.length*2]="|_."
-		}
-		else if(input[i]=='3')
-		{
-			fig[i]="._."
-			fig[i+input.length]="._|"
-			fig[i+input.length*2]="._|"
-		}
-		else if(input[i]=='4')
-		{
-			fig[i]="..."
-			fig[i+input.length]="|_|"
-			fig[i+input.length*2]="..|"
-		}
-		else if(input[i]=='5')
-		{
-			fig[i]="._."
-			fig[i+input.length]="|_."
-			fig[i+input.length*2]="._|"
-		}
-		else if(input[i]=='6')
-		{
-			fig[i]="._."
-			fig[i+input.length]="|_'"
-			fig[i+input.length*2]="|_|"
-		}
-		else if(input[i]=='7')
-		{
-			fig[i]="._."
-			fig[i+input.length]="..|"
-			fig[i+input.length*2]="..|"
-		}
-		else if(input[i]=='8')
-		{
-			fig[i]="._."
-			fig[i+input.length]="|_|"
-			fig[i+input.length*2]="|_|"
-		}
-		else if(input[i]=='9')
-		{
-			fig[i]="._."
-			fig[i+input.length]="|_|"
-			fig[i+input.length*2]="..|"
-		}
-	}
-	for(var i=0;i<3*(input.length);i++)
-	{
-		text+=fig[i]
-		text+=' '
-		if((i+1)%(input.length)==0)
-			text+='\n'
-	}
-	//console.log(text)
-	
-    //console.log("Debug Info");
-    //return 'Hello World!';
-    
-	return text
+    var Line1 = '._.   ...   ._.   ._.   ...   ._.   ._.   ._.   ._.   ._.'
+    var Arr1 = Line1.split('   ')
+    var Line2 = '|.|   ..|   ._|   ._|   |_|   |_.   |_.   ..|   |_|   |_|'
+    var Arr2 = Line2.split('   ')
+    var Line3 = '|_|   ..|   |_.   ._|   ..|   ._|   |_|   ..|   |_|   ..|'
+    var Arr3 = Line3.split('   ')
+    var fig1 = []
+    var fig2 = []
+    var fig3 = []
+    for (var i = 0; i < input.length; i++) {
+        var fig = parseInt(input[i])
+        fig1.push(Arr1[fig])
+        fig2.push(Arr2[fig])
+        fig3.push(Arr3[fig])
+    }
+    var l1 = fig1.join(' ')
+    var l2 = fig2.join(' ')
+    var l3 = fig3.join(' ')
+    return l1 + '\n' + l2 + '\n' + l3 + '\n';
 };
