@@ -74,7 +74,7 @@ module.exports = function main(input) {
 	}
 	console.log(text)
 	
-    console.log("Debug Info");
+    //console.log("Debug Info");
     //return 'Hello World!';
     a=parseInt(input)
 	return a
