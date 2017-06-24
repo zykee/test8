@@ -1,6 +1,6 @@
 module.exports = function main(input) {
 	var fig = new Array(3*(input.length))
-	var text='\n'
+	var text=''
 	for(var i=0;i<input.length;i++)
 	{
 		if(input[i]=='0')
